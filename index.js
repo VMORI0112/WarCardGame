@@ -1,8 +1,9 @@
 var playerResult1=0 ;
 var playerResult2=0 ;
-
+var winner=0 ;
 
 function generate1() {                   // Randomly get card and type of card(Spades, Diamonds, Hearts & Clovers)
+
   let min=2;
   let max=14 ;
   let typeCard="" ;
@@ -59,6 +60,7 @@ function generate1() {                   // Randomly get card and type of card(S
 
 }
 
+
 function generate2() {                   // Randomly get card and type of card(Spades, Diamonds, Hearts & Clovers)
   let min=2;
   let max=14 ;
@@ -114,39 +116,25 @@ function generate2() {                   // Randomly get card and type of card(S
       document.querySelector("#cardnumber2").innerHTML = `${card2}<p>${typeCard2}</p>`;
       document.querySelector("#p2go").disabled = true;
       playerResult2=card2 ;
-      console.log(card2)
 check();
 }
 
-
-//console.log(playerResult1, playerResult2)
-
-var winner=0;
+// var winner=0;
 
 function check() {
-
-//console.log('checked')
-
 
 if (playerResult1 > playerResult2) {
     winner=playerResult1 ;
     document.querySelector("#p1go").disabled = false ;
     document.querySelector("#p2go").disabled = false ;
     document.querySelector("#displaywinner").innerHTML = `${winner} <p> is the winner</p>` ;
-    console.log(winner);
     winner= 0;
-
-
  } else {
         winner=playerResult2 ;
         document.querySelector("#p1go").disabled = false ;
         document.querySelector("#p2go").disabled = false ;
         document.querySelector("#displaywinner").innerHTML = `${winner} <p> is the winner</p>` ;
-   console.log("else" + winner);
-
         winner= 0;
-
-
-}
+    }
 
 }
