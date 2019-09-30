@@ -35,26 +35,27 @@ function generate1() {                   // Randomly get card and type of card(S
      }
 
       let card = Math.floor(Math.random() * (max - min + 1) + min);
+      let cardString = card;
       switch(card) {
         case 11:
-           card="J"
+           cardString="J"
             break;
         case 12:
-           card="Q"
+           cardString="Q"
             break;
          case 13:
-            card="K"
+            cardString="K"
             break;
          case 14:
-            card="A"
+            cardString="A"
             break;
        // default:
     }
 
-      document.querySelector("#cardnumber1").innerHTML = `${card}<p>${colorCard} ${typeCard}</p>`;
+      document.querySelector("#cardnumber1").innerHTML = `${cardString}<p>${colorCard} ${typeCard}</p>`;
       document.querySelector("#p1go").disabled = true;
       playerResult1=card ;
-        console.log(card)
+
 }
 
 function generate2() {                   // Randomly get card and type of card(Spades, Diamonds, Hearts & Clovers)
@@ -90,18 +91,20 @@ function generate2() {                   // Randomly get card and type of card(S
      }
 
       let card2 = Math.floor(Math.random() * (max - min + 1) + min);
+      let card2String = card2 ;
+
       switch(card2) {
         case 11:
-           card2="J"
+           card2String="J"
             break;
         case 12:
-           card2="Q"
+           card2String="Q"
             break;
          case 13:
-            card2="K"
+            card2String="K"
             break;
          case 14:
-            card2="A"
+            card2String="A"
             break;
        // default:
     }
